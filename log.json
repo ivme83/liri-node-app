@@ -1,0 +1,135 @@
+[
+  {
+    "user": "ivme83",
+    "tweets": [
+      {
+        "text": "Hello, more tweets!",
+        "time": "Fri Apr 13 20:00:10 +0000 2018"
+      },
+      {
+        "text": "This is a tweet",
+        "time": "Fri Apr 13 20:00:03 +0000 2018"
+      },
+      {
+        "text": "https://t.co/NAJBU3ziux",
+        "time": "Tue Mar 27 03:14:01 +0000 2018"
+      },
+      {
+        "text": "https://t.co/6mWQgqHyIr",
+        "time": "Wed Mar 07 15:03:12 +0000 2018"
+      },
+      {
+        "text": "https://t.co/Rjwg05Z6Pb",
+        "time": "Mon Feb 12 20:02:05 +0000 2018"
+      },
+      {
+        "text": "https://t.co/sSbuAlPmPe",
+        "time": "Mon Feb 12 18:22:01 +0000 2018"
+      },
+      {
+        "text": "https://t.co/mHipftX7El",
+        "time": "Mon Feb 12 17:10:31 +0000 2018"
+      },
+      {
+        "text": "https://t.co/fxsHRRfJE3",
+        "time": "Mon Feb 12 16:39:28 +0000 2018"
+      },
+      {
+        "text": "https://t.co/uEfPSwhGhx",
+        "time": "Mon Feb 12 16:37:58 +0000 2018"
+      },
+      {
+        "text": "https://t.co/R8uMDJjKKG",
+        "time": "Mon Feb 12 16:37:50 +0000 2018"
+      },
+      {
+        "text": "https://t.co/3Nlz9P4XDK",
+        "time": "Mon Feb 12 16:33:07 +0000 2018"
+      },
+      {
+        "text": "https://t.co/ZTZk72hRMX",
+        "time": "Mon Feb 12 12:54:23 +0000 2018"
+      },
+      {
+        "text": "https://t.co/UyFYwy4bqh",
+        "time": "Sun Feb 11 14:33:29 +0000 2018"
+      },
+      {
+        "text": "https://t.co/m1sKQniWuO",
+        "time": "Sun Feb 11 07:51:30 +0000 2018"
+      },
+      {
+        "text": "https://t.co/j0xIDHeXQY",
+        "time": "Sun Feb 11 01:52:56 +0000 2018"
+      },
+      {
+        "text": "https://t.co/uat8vw8FyD",
+        "time": "Sun Feb 11 00:36:10 +0000 2018"
+      },
+      {
+        "text": "https://t.co/X0qMNsJvCI",
+        "time": "Sat Feb 10 22:19:25 +0000 2018"
+      },
+      {
+        "text": "https://t.co/rwuRRfQW85",
+        "time": "Sat Feb 10 22:12:36 +0000 2018"
+      },
+      {
+        "text": "https://t.co/b5y4SFrHyw",
+        "time": "Sat Feb 10 20:29:36 +0000 2018"
+      },
+      {
+        "text": "https://t.co/Wk8iTEc2sj",
+        "time": "Sat Feb 10 19:22:50 +0000 2018"
+      }
+    ],
+    "logTime": "2018-04-14T03:09:55.088Z"
+  },
+  {
+    "title": "The Matrix",
+    "year": "1999",
+    "imdb": "8.7/10",
+    "rotten": "87%",
+    "country": "USA",
+    "language": "English",
+    "plot": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving",
+    "logTime": "2018-04-14T03:10:26.080Z"
+  },
+  {
+    "artist": "Daya",
+    "track": "Talk",
+    "url": "https://open.spotify.com/track/1OOfiuAk8mDuwvFKGAmbTd",
+    "album": "Sit Still, Look Pretty",
+    "logTime": "2018-04-14T03:11:07.544Z"
+  },
+  {
+    "artist": "Daya",
+    "track": "Talk",
+    "url": "https://open.spotify.com/track/1OOfiuAk8mDuwvFKGAmbTd",
+    "album": "Sit Still, Look Pretty",
+    "logTime": "2018-04-14T03:11:48.927Z"
+  },
+  {
+    "title": "The Matrix",
+    "year": "1999",
+    "imdb": "8.7/10",
+    "rotten": "87%",
+    "country": "USA",
+    "language": "English",
+    "plot": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+    "actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving",
+    "logTime": "2018-04-14T03:12:31.073Z"
+  },
+  {
+    "title": "The Avengers",
+    "year": "2012",
+    "imdb": "8.1/10",
+    "rotten": "92%",
+    "country": "USA",
+    "language": "English, Russian, Hindi",
+    "plot": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+    "logTime": "2018-04-14T03:13:47.058Z"
+  }
+]

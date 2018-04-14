@@ -35,8 +35,6 @@ switch(liriCommand) {
     case "movie-this":
         var movieName = "";
 
-        // Loop through all the words in the node argument
-        // And do a little for-loop magic to handle the inclusion of "+"s
         if (process.argv[3] !== undefined) {
             for (var i = 3; i < process.argv.length; i++) {
 
@@ -62,15 +60,26 @@ function fetchTweets(un) {
     var params = {screen_name: un};
     twClient.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (!error) {
-            var myLog = "";
-            myLog = "my-tweets";
-            console.log("----------");
+            var tweetObj = {}
+            var myTweets = []
+
+            tweetObj.user = un;
+
             for(var i = 0; i < 20; i++){
-                console.log(params.screen_name + " tweeted: " + tweets[i].text + " on " + tweets[i].created_at);
-                myLog += " - " + params.screen_name + " tweeted: " + tweets[i].text + " on " + tweets[i].created_at
+                myTweets.push({text: tweets[i].text, time: tweets[i].created_at});
             }
-            console.log("----------");
-            writeLog(myLog);
+            tweetObj.tweets = myTweets;
+            tweetObj.logTime = moment();
+
+            console.log("|------------------------------------|")
+            console.log(tweetObj.user + " has tweeted the following: ");
+
+            for (var i = 0; i < tweetObj.tweets.length; i++) {
+                console.log("On " + tweetObj.tweets[i].time + " " + tweetObj.user + " tweeted: " + tweetObj.tweets[i].text);
+            }
+            console.log("|------------------------------------|")
+            
+            writeLog(tweetObj);
         }
     });
 }
@@ -82,19 +91,24 @@ function fetchSong(tn) {
         }
 
         var song = data.tracks.items[0];
-        var myLog = "";
-        myLog = "spotify-this-song";
-        console.log("----------");
-        console.log("Artist: " + song.artists[0].name);
-        myLog += " - Artist: " + song.artists[0].name;
-        console.log("Track: " + song.name);
-        myLog += " - Track: " + song.name
-        console.log("Preview: " + song.external_urls.spotify);
-        myLog += " - Preview: " + song.external_urls.spotify
-        console.log("Album: " + song.album.name)
-        myLog += " - Album: " + song.album.name;
-        console.log("----------");
-        writeLog(myLog);
+
+        var trackObj = {
+            artist: song.artists[0].name,
+            track: song.name,
+            url: song.external_urls.spotify,
+            album: song.album.name,
+            logTime: moment()            
+        }
+        
+        console.log("|------------------------------------|")
+        for (var property in trackObj) {
+            if (property !== "logTime") {
+                console.log(property + " - " + trackObj[property]);
+            }
+        }
+        console.log("|------------------------------------|")
+
+        writeLog(trackObj);
     });
 }
 
@@ -106,28 +120,28 @@ function fetchMovie(mn) {
         // If the request is successful
         if (!error && response.statusCode === 200) {
             var movieObj = JSON.parse(body);
-            // console.log(JSON.parse(body));
-            var myLog = "";
-            myLog = "movie-this";
-            console.log("----------");
-            console.log("Title: " + movieObj.Title);
-            myLog += " - Title: " + movieObj.Title;
-            console.log("Release Year: " + movieObj.Year);
-            myLog += " - Release Year: " + movieObj.Year;
-            console.log("IMDB Rating: " + movieObj.Ratings[0].Value);
-            myLog += " - IMDB Rating: " + movieObj.Ratings[0].Value;
-            console.log("Rotten Tomatoes: " + movieObj.Ratings[1].Value);
-            myLog += " - Rotten Tomatoes: " + movieObj.Ratings[1].Value;
-            console.log("Country: " + movieObj.Country);
-            myLog += " - Country: " + movieObj.Country;
-            console.log("Language: " + movieObj.Language);
-            myLog += " - Language: " + movieObj.Language;
-            console.log("Plot: " + movieObj.Plot);
-            myLog += " - Plot: " + movieObj.Plot;
-            console.log("Actors: " + movieObj.Actors);
-            myLog += " - Actors: " + movieObj.Actors;
-            console.log("----------");
-            writeLog(myLog);
+
+            var movObj = {
+                title: movieObj.Title,
+                year: movieObj.Year,
+                imdb: movieObj.Ratings[0].Value,
+                rotten: movieObj.Ratings[1].Value,
+                country: movieObj.Country,
+                language: movieObj.Language,
+                plot: movieObj.Plot,
+                actors: movieObj.Actors,
+                logTime: moment()
+            }
+
+            console.log("|------------------------------------|")
+            for (var property in movObj) {
+                if (property !== "logTime") {
+                    console.log(property + " - " + movObj[property]);
+                }
+            }
+            console.log("|------------------------------------|")
+
+            writeLog(movObj);
         }
     });
 }
@@ -158,16 +172,13 @@ function fetchDir() {
     });
 }
 
-function writeLog(str){
-    fs.appendFile("log.txt", str, function(err) {
-        // If an error was experienced we say it.
-        if (err) {
-            console.log(err);
-        }
-        
-        // If no error is experienced, we'll log the phrase "Content Added" to our node console.
-        else {
-            console.log("Content Added!");
-        }
-    });
+function writeLog(obj){
+    fs.readFile('log.json', function (err, data) {
+        var json = JSON.parse(data);
+        json.push(obj);
+    
+        fs.writeFile("log.json", JSON.stringify(json, null, 2), (err) => {
+            if (err) throw err;
+          });
+    })
 }
