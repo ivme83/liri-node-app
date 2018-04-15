@@ -175,7 +175,8 @@ function fetchDir() {
 function writeLog(obj){
     fs.readFile('log.json', function (err, data) {
         var json = JSON.parse(data);
-        json.push(obj);
+
+        json[liriCommand].push(obj);
     
         fs.writeFile("log.json", JSON.stringify(json, null, 2), (err) => {
             if (err) throw err;
