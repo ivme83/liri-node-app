@@ -1,5 +1,3 @@
-// import { write } from "fs";
-
 require("dotenv").config();
 var fs = require("fs");
 var request = require("request");

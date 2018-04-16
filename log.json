@@ -84,7 +84,7 @@
           "time": "Sat Feb 10 19:22:50 +0000 2018"
         }
       ],
-      "logTime": "2018-04-15T17:49:12.467Z"
+      "logTime": "2018-04-16T16:19:31.402Z"
     }
   ],
   "spotify-this-song": [
@@ -125,6 +125,39 @@
       "plot": "The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.",
       "actors": "Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins",
       "logTime": "2018-04-15T18:09:44.926Z"
+    },
+    {
+      "title": "Black Panther",
+      "year": "2018",
+      "imdb": "7.8/10",
+      "rotten": "97%",
+      "country": "USA",
+      "language": "Swahili, Nama, English, Xhosa, Korean",
+      "plot": "T'Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced African nation, but his claim is challenged by a vengeful outsider who was a childhood victim of T'Challa's father's mistake.",
+      "actors": "Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira",
+      "logTime": "2018-04-15T19:45:47.054Z"
+    },
+    {
+      "title": "Contact",
+      "year": "1997",
+      "imdb": "7.4/10",
+      "rotten": "65%",
+      "country": "USA",
+      "language": "English, Spanish, German, Russian",
+      "plot": "Dr. Ellie Arroway, after years of searching, finds conclusive radio proof of extraterrestrial intelligence, sending plans for a mysterious machine.",
+      "actors": "Jena Malone, David Morse, Jodie Foster, Geoffrey Blake",
+      "logTime": "2018-04-15T19:56:40.221Z"
+    },
+    {
+      "title": "Dark City",
+      "year": "1998",
+      "imdb": "7.7/10",
+      "rotten": "66/100",
+      "country": "Australia, USA",
+      "language": "English",
+      "plot": "A man struggles with memories of his past, including a wife he cannot remember, in a nightmarish world with no sun.",
+      "actors": "Rufus Sewell, William Hurt, Kiefer Sutherland, Jennifer Connelly",
+      "logTime": "2018-04-15T19:57:37.541Z"
     }
   ]
 }
